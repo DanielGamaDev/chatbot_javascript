@@ -1,6 +1,6 @@
 const venom = require("venom-bot");  // Criando o venom-bot
 
-                    // APRESENTAÇÃO E MENU INICIAL
+// APRESENTAÇÃO E MENU INICIAL
 
 const msg_apresentacao = `Olá, eu sou o FriBot!
 Um robô virtual criado para te ajudar a se locomover por Nova Friburgo.
@@ -12,7 +12,11 @@ const menu_inicial = `Escolha uma das opções abaixo digitando apenas o número
 [3] - Comprar em lojas de atacado.
 [4] - Cancelar conversa.`;
 
-                    // MENU TURISMO E SUAS OPÇÕES
+const finalizar_conversa = ` Obrigado por se informar com o FRIBOT!
+Caso queira saber mais sobre Nova Friburgo basta iniciar outra conversa.
+Tchau ;)`;
+
+// MENU TURISMO E SUAS OPÇÕES
 
 // Menu
 const menu_turismo = `Você escolheu a opção TURISMO!
@@ -43,7 +47,7 @@ const shoppings = `Shoppings:
 [3] - Museu de Friburgo.
 [4] - Voltar para o menu de turismo.`;
 
-                    // MENU VAREJO E SUAS OPÇÕES
+// MENU VAREJO E SUAS OPÇÕES
 
 // Menu
 const menu_varejo = `Você escolheu a opção COMPRAR EM LOJAS DE VAREJO!
@@ -82,7 +86,7 @@ const presentes_varejo = `Shoppings:
 [3] - Museu de Friburgo.
 [4] - Voltar para o menu de turismo.`;
 
-                    // MENU ATACADO E SUAS OPÇÕES
+// MENU ATACADO E SUAS OPÇÕES
 
 // Menu
 const menu_atacado = `Você escolheu a opção COMPRAR EM LOJAS DE ATACADO!
@@ -122,7 +126,7 @@ const aviamentos_atacado = `Shoppings:
 [4] - Voltar para o menu de turismo.`;
 
 
-                    // DEVLARAÇÃO DE VARIÁVEIS
+// DEVLARAÇÃO DE VARIÁVEIS
 let conversa_iniciada = false;
 let client;
 let opcao_turismo = false;
@@ -130,7 +134,7 @@ let opcao_varejo = false;
 let opcao_atacado = false;
 
 
-                    // CÓDIGO PRINCIPAL
+// CÓDIGO PRINCIPAL
 
 venom.create({
     session: "chatbot-FriBot",
@@ -166,7 +170,9 @@ const handleUserResponse = async (message) => {
                 await client.sendText(message.from, shoppings);
                 break;
             case "4":
+                await client.sendText(message.from, "Voltando ao início...");
                 await client.sendText(message.from, menu_inicial);
+                start();
                 break;
             default:
                 await client.sendText(message.from, "Opção não reconhecida. Por favor, escolha novamente.");
@@ -188,7 +194,9 @@ const handleUserResponse = async (message) => {
                 await client.sendText(message.from, presentes_varejo);
                 break;
             case "5":
-                await client.sendText(message.from, "Voltando para o menu inicial");
+                await client.sendText(message.from, "Voltando ao início...");
+                await client.sendText(message.from, menu_inicial);
+                start();
                 break;
             default:
                 await client.sendText(message.from, "Opção não reconhecida. Por favor, escolha novamente.");
@@ -210,7 +218,9 @@ const handleUserResponse = async (message) => {
                 await client.sendText(message.from, aviamentos_atacado);
                 break;
             case "5":
-                await client.sendText(message.from, "Voltando para o menu inicial");
+                await client.sendText(message.from, "Voltando ao início...");
+                await client.sendText(message.from, menu_inicial);
+                start();
                 break;
             default:
                 await client.sendText(message.from, "Opção não reconhecida. Por favor, escolha novamente.");
@@ -231,10 +241,13 @@ const handleUserResponse = async (message) => {
                 opcao_atacado = true;
                 break;
             case "4": // OPÇÃO CANCELAR CONVERSA
-                await client.sendText(message.from, "Conversa cancelada!");
+                await client.sendText(message.from, finalizar_conversa);
+                break;
+            case ".":
+                await client.sendText(message.from, "Chegou aqui");
                 break;
             default: // OPÇÃO ERRADA OU DESCONHECIDA
-                await client.sendText(message.from, "Opção não reconhecida. Por favor, escolha novamente.");
+                await client.sendText(message.from, "Escolha uma opção válida. Reiniciando a conversa...");
                 client.sendText(message.from, menu_inicial);
         }
     }
