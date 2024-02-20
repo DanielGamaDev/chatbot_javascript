@@ -1,0 +1,13 @@
+2024/02/19-20:05:53.352 4670 Reusing MANIFEST C:\Users\danie\Documents\GitHub\chatbot_javascript_1\tokens\chatbot-FriBot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/02/19-20:05:53.352 4670 Recovering log #183
+2024/02/19-20:05:53.439 4670 Reusing old log C:\Users\danie\Documents\GitHub\chatbot_javascript_1\tokens\chatbot-FriBot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000183.log 
+2024/02/19-20:06:14.715 3f54 Level-0 table #188: started
+2024/02/19-20:06:14.793 3f54 Level-0 table #188: 1110195 bytes OK
+2024/02/19-20:06:14.796 3f54 Delete type=0 #183
+2024/02/19-20:06:15.239 49cc Compacting 1@1 + 1@2 files
+2024/02/19-20:06:15.357 49cc Generated table #189@1: 48981 keys, 2217796 bytes
+2024/02/19-20:06:15.362 49cc Generated table #190@1: 4756 keys, 101991 bytes
+2024/02/19-20:06:15.362 49cc Compacted 1@1 + 1@2 files => 2319787 bytes
+2024/02/19-20:06:15.363 49cc compacted to: files[ 0 0 2 0 0 0 0 ]
+2024/02/19-20:06:15.363 49cc Delete type=2 #185
+2024/02/19-20:06:15.363 49cc Delete type=2 #188
