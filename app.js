@@ -13,8 +13,11 @@ const menu_inicial = `Escolha uma das opções abaixo digitando apenas o número
 [4] - Cancelar conversa.`;
 
 const finalizar_conversa = ` Obrigado por se informar com o FRIBOT!
-Caso queira saber mais sobre Nova Friburgo basta iniciar outra conversa.
-Tchau ;)`;
+Caso queira saber mais sobre Nova Friburgo basta escolher novamente uma das opções abaixo:
+[1] - Turismo (pontos turísticos, restaurantes, shoppings etc.)
+[2] - Comprar em lojas de varejo.
+[3] - Comprar em lojas de atacado.
+[4] - Cancelar conversa.`;
 
 // MENU TURISMO E SUAS OPÇÕES
 
@@ -132,6 +135,7 @@ let client;
 let opcao_turismo = false;
 let opcao_varejo = false;
 let opcao_atacado = false;
+let opcao_parar_conversa = false;
 
 
 // CÓDIGO PRINCIPAL
@@ -151,7 +155,9 @@ const start = () => {
             await client.sendText(message.from, msg_apresentacao);
             await client.sendText(message.from, menu_inicial);
         } else {
-            handleUserResponse(message);
+            if(!opcao_parar_conversa){
+                handleUserResponse(message);
+            }
         }
     });
 };
@@ -162,12 +168,15 @@ const handleUserResponse = async (message) => {
         switch (message.body) {
             case "1":
                 await client.sendText(message.from, pontos_turisticos);
+                await client.sendText(message.from, finalizar_conversa);
                 break;
             case "2":
                 await client.sendText(message.from, restaurantes);
+                await client.sendText(message.from, finalizar_conversa);
                 break;
             case "3":
                 await client.sendText(message.from, shoppings);
+                await client.sendText(message.from, finalizar_conversa);
                 break;
             case "4":
                 await client.sendText(message.from, "Voltando ao início...");
@@ -183,15 +192,19 @@ const handleUserResponse = async (message) => {
         switch (message.body) {
             case "1":
                 await client.sendText(message.from, lingerie_varejo);
+                await client.sendText(message.from, finalizar_conversa);
                 break;
             case "2":
                 await client.sendText(message.from, pijamas_varejo);
+                await client.sendText(message.from, finalizar_conversa);
                 break;
             case "3":
                 await client.sendText(message.from, cuecas_varejo);
+                await client.sendText(message.from, finalizar_conversa);
                 break;
             case "4":
                 await client.sendText(message.from, presentes_varejo);
+                await client.sendText(message.from, finalizar_conversa);
                 break;
             case "5":
                 await client.sendText(message.from, "Voltando ao início...");
@@ -207,15 +220,19 @@ const handleUserResponse = async (message) => {
         switch (message.body) {
             case "1":
                 await client.sendText(message.from, lingerie_atacado);
+                await client.sendText(message.from, finalizar_conversa);
                 break;
             case "2":
                 await client.sendText(message.from, pijamas_atacado);
+                await client.sendText(message.from, finalizar_conversa);
                 break;
             case "3":
                 await client.sendText(message.from, cuecas_atacado);
+                await client.sendText(message.from, finalizar_conversa);
                 break;
             case "4":
                 await client.sendText(message.from, aviamentos_atacado);
+                await client.sendText(message.from, finalizar_conversa);
                 break;
             case "5":
                 await client.sendText(message.from, "Voltando ao início...");
@@ -243,12 +260,10 @@ const handleUserResponse = async (message) => {
             case "4": // OPÇÃO CANCELAR CONVERSA
                 await client.sendText(message.from, finalizar_conversa);
                 break;
-            case ".":
-                await client.sendText(message.from, "Chegou aqui");
-                break;
             default: // OPÇÃO ERRADA OU DESCONHECIDA
                 await client.sendText(message.from, "Escolha uma opção válida. Reiniciando a conversa...");
                 client.sendText(message.from, menu_inicial);
+                break;
         }
     }
 };
