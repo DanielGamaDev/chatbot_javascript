@@ -1,5 +1,3 @@
-const venom = require("venom-bot");  // Criando o venom-bot
-
 // APRESENTAÇÃO E MENU INICIAL
 
 const msg_apresentacao = `Olá, eu sou o FriBot!
@@ -16,8 +14,7 @@ const finalizar_conversa = ` Obrigado por se informar com o FRIBOT!
 Caso queira saber mais sobre Nova Friburgo basta escolher novamente uma das opções abaixo:
 [1] - Turismo (pontos turísticos, restaurantes, shoppings etc.)
 [2] - Comprar em lojas de varejo.
-[3] - Comprar em lojas de atacado.
-[4] - Cancelar conversa.`;
+[3] - Comprar em lojas de atacado.`;
 
 // MENU TURISMO E SUAS OPÇÕES
 
@@ -33,21 +30,21 @@ Escolha uma das opções abaixo para conhecer:
 const pontos_turisticos = `Pontos Turísticos:
 [1] - Pico da Caledônia.
 [2] - Teleférico.
-[3] - Museu de Friburgo.
+[3] - Pedra do Cão Sentado.
 [4] - Voltar para o menu de turismo.`;
 
 // Opção 2
 const restaurantes = `Restaurantes:
-[1] - Pico da Caledônia.
-[2] - Teleférico.
-[3] - Museu de Friburgo.
+[1] - La Bamba.
+[2] - Esquina Dois.
+[3] - De Rivera.
 [4] - Voltar para o menu de turismo.`;
 
 // Opção 3
 const shoppings = `Shoppings:
-[1] - Pico da Caledônia.
-[2] - Teleférico.
-[3] - Museu de Friburgo.
+[1] - Cadima Shopping.
+[2] - Friburgo Shopping.
+[3] - Shopping Arp.
 [4] - Voltar para o menu de turismo.`;
 
 // MENU VAREJO E SUAS OPÇÕES
@@ -62,32 +59,32 @@ Escolha uma das opções abaixo:
 [5] - Voltar para opções anteriores.`;
 
 // Opção 1
-const lingerie_varejo = `Pontos Turísticos:
-[1] - Pico da Caledônia.
-[2] - Teleférico.
-[3] - Museu de Friburgo.
-[4] - Voltar para o menu de turismo.`;
+const lingerie_varejo = `Lingerie Varejo:
+[1] - Click Chique.
+[2] - De Chelles.
+[3] - Fernanda Foligno.
+[4] - Voltar para o menu de varejo.`;
 
 // Opção 2
-const pijamas_varejo = `Restaurantes:
-[1] - Pico da Caledônia.
-[2] - Teleférico.
-[3] - Museu de Friburgo.
-[4] - Voltar para o menu de turismo.`;
+const pijamas_varejo = `Pijamas Varejo:
+[1] - Fernanda Foligno.
+[2] - Monthal.
+[3] - Molambu.
+[4] - Voltar para o menu de verejo.`;
 
 // Opção 3
-const cuecas_varejo = `Shoppings:
-[1] - Pico da Caledônia.
-[2] - Teleférico.
-[3] - Museu de Friburgo.
-[4] - Voltar para o menu de turismo.`;
+const cuecas_varejo = `Cuecas Varejo:
+[1] - Modo M.
+[2] - Fernanda Foligno.
+[3] - Cuecaria.
+[4] - Voltar para o menu de varejo.`;
 
 // Opção 4
-const presentes_varejo = `Shoppings:
-[1] - Pico da Caledônia.
-[2] - Teleférico.
-[3] - Museu de Friburgo.
-[4] - Voltar para o menu de turismo.`;
+const presentes_varejo = `Presentes Varejo:
+[1] - Modo M.
+[2] - Fernanda Foligno.
+[3] - Art Tock.
+[4] - Voltar para o menu de varejo.`;
 
 // MENU ATACADO E SUAS OPÇÕES
 
@@ -101,42 +98,41 @@ Escolha uma das opções abaixo:
 [5] - Voltar para opções anteriores.`;
 
 // Opção 1
-const lingerie_atacado = `Pontos Turísticos:
-[1] - Pico da Caledônia.
-[2] - Teleférico.
-[3] - Museu de Friburgo.
-[4] - Voltar para o menu de turismo.`;
+const lingerie_atacado = `Lingerie Atacado:
+[1] - Fernanda Foligno.
+[2] - Click Chique.
+[3] - Beijo Salgado.
+[4] - Voltar para o menu de atacado.`;
 
 // Opção 2
-const pijamas_atacado = `Restaurantes:
-[1] - Pico da Caledônia.
-[2] - Teleférico.
-[3] - Museu de Friburgo.
-[4] - Voltar para o menu de turismo.`;
+const pijamas_atacado = `Pijamas Atacado:
+[1] - Fernanda Foligno.
+[2] - Monthal.
+[3] - Molambu.
+[4] - Voltar para o menu de atacado.`;
 
 // Opção 3
-const cuecas_atacado = `Shoppings:
-[1] - Pico da Caledônia.
-[2] - Teleférico.
-[3] - Museu de Friburgo.
-[4] - Voltar para o menu de turismo.`;
+const cuecas_atacado = `Cuecas Atacado:
+[1] - Modo M.
+[2] - Fernanda Foligno.
+[3] - Cuecaria.
+[4] - Voltar para o menu de atacado.`;
 
 // Opção 4
-const aviamentos_atacado = `Shoppings:
-[1] - Pico da Caledônia.
-[2] - Teleférico.
-[3] - Museu de Friburgo.
-[4] - Voltar para o menu de turismo.`;
+const aviamentos_atacado = `Aviamentos Atacado:
+[1] - Laços Criwall.
+[2] - Armarinho Carretel.
+[3] - FZ Armarinho.
+[4] - Voltar para o menu de atacado.`;
 
 
-// DEVLARAÇÃO DE VARIÁVEIS
+// DECLARAÇÃO DE VARIÁVEIS
+const venom = require("venom-bot");  // Criando o venom-bot
 let conversa_iniciada = false;
 let client;
 let opcao_turismo = false;
 let opcao_varejo = false;
 let opcao_atacado = false;
-let opcao_parar_conversa = false;
-
 
 // CÓDIGO PRINCIPAL
 
@@ -155,9 +151,7 @@ const start = () => {
             await client.sendText(message.from, msg_apresentacao);
             await client.sendText(message.from, menu_inicial);
         } else {
-            if(!opcao_parar_conversa){
-                handleUserResponse(message);
-            }
+            handleUserResponse(message);
         }
     });
 };

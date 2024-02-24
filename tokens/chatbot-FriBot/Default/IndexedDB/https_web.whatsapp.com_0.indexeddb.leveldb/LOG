@@ -1,3 +1,12 @@
-2024/02/21-20:02:47.930 3770 Reusing MANIFEST C:\Users\danie\Documents\GitHub\chatbot_javascript_1\tokens\chatbot-FriBot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2024/02/21-20:02:47.930 3770 Recovering log #296
-2024/02/21-20:02:47.965 3770 Reusing old log C:\Users\danie\Documents\GitHub\chatbot_javascript_1\tokens\chatbot-FriBot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000296.log 
+2024/02/24-12:14:24.654 4e48 Reusing MANIFEST C:\Users\danie\Documents\GitHub\chatbot_javascript_1\tokens\chatbot-FriBot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2024/02/24-12:14:24.658 4e48 Recovering log #296
+2024/02/24-12:14:24.712 4e48 Reusing old log C:\Users\danie\Documents\GitHub\chatbot_javascript_1\tokens\chatbot-FriBot\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000296.log 
+2024/02/24-12:14:43.257 2a08 Level-0 table #303: started
+2024/02/24-12:14:43.350 2a08 Level-0 table #303: 1341430 bytes OK
+2024/02/24-12:14:43.352 2a08 Delete type=0 #296
+2024/02/24-12:14:43.365 2a08 Compacting 1@1 + 3@2 files
+2024/02/24-12:14:43.489 2a08 Generated table #304@1: 86311 keys, 2236783 bytes
+2024/02/24-12:14:43.648 2a08 Generated table #305@1: 36045 keys, 2251111 bytes
+2024/02/24-12:14:43.733 2a08 Generated table #306@1: 41763 keys, 919147 bytes
+2024/02/24-12:14:43.733 2a08 Compacted 1@1 + 3@2 files => 5407041 bytes
+2024/02/24-12:14:43.735 2a08 compacted to: files[ 0 0 3 0 0 0 0 ]
