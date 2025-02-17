@@ -1,3 +1,2 @@
-2024/02/24-12:14:24.407 1410 Reusing MANIFEST C:\Users\danie\Documents\GitHub\chatbot_javascript_1\tokens\chatbot-FriBot\Default\Local Storage\leveldb/MANIFEST-000001
-2024/02/24-12:14:24.413 1410 Recovering log #10
-2024/02/24-12:14:24.414 1410 Reusing old log C:\Users\danie\Documents\GitHub\chatbot_javascript_1\tokens\chatbot-FriBot\Default\Local Storage\leveldb/000010.log 
+2025/02/17-16:30:47.119 181c Creating DB C:\Users\danie\Documents\GitHub\chatbot_javascript\tokens\chatbot-FriBot\Default\Local Storage\leveldb since it was missing.
+2025/02/17-16:30:47.189 181c Reusing MANIFEST C:\Users\danie\Documents\GitHub\chatbot_javascript\tokens\chatbot-FriBot\Default\Local Storage\leveldb/MANIFEST-000001

@@ -136,13 +136,25 @@ let opcao_atacado = false;
 
 // CÓDIGO PRINCIPAL
 
+//venom.create({
+  //  session: "chatbot-FriBot",
+    //multidevice: true
+//}).then((cli) => {
+  //  client = cli;
+    //start();
+//}).catch((err) => console.log(err));
+
 venom.create({
-    session: "chatbot-FriBot",
-    multidevice: true
+    session: "chatbot-FriBot-Teste",
+    multidevice: true,
+    headless: 'new',  // Usa o novo modo Headless
+    browserArgs: ['--no-sandbox', '--disable-setuid-sandbox'],  // Argumentos para evitar erros
+    executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'  // Caminho do Chrome
 }).then((cli) => {
     client = cli;
     start();
 }).catch((err) => console.log(err));
+
 
 const start = () => {
     client.onMessage(async (message) => {
