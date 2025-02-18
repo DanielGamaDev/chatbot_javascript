@@ -136,14 +136,6 @@ let opcao_atacado = false;
 
 // CÓDIGO PRINCIPAL
 
-//venom.create({
-  //  session: "chatbot-FriBot",
-    //multidevice: true
-//}).then((cli) => {
-  //  client = cli;
-    //start();
-//}).catch((err) => console.log(err));
-
 venom.create({
     session: "chatbot-FriBot-Teste",
     multidevice: true,
