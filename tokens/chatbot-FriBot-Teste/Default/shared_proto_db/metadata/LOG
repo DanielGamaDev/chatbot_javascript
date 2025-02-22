@@ -1,2 +1,3 @@
-2025/02/17-16:37:50.303 2624 Creating DB C:\Users\danie\Documents\GitHub\chatbot_javascript\tokens\chatbot-FriBot-Teste\Default\shared_proto_db\metadata since it was missing.
-2025/02/17-16:37:50.324 2624 Reusing MANIFEST C:\Users\danie\Documents\GitHub\chatbot_javascript\tokens\chatbot-FriBot-Teste\Default\shared_proto_db\metadata/MANIFEST-000001
+2025/02/22-14:53:30.917 2b60 Reusing MANIFEST C:\Users\danie\Documents\GitHub\chatbot_javascript\tokens\chatbot-FriBot-Teste\Default\shared_proto_db\metadata/MANIFEST-000001
+2025/02/22-14:53:30.917 2b60 Recovering log #3
+2025/02/22-14:53:30.918 2b60 Reusing old log C:\Users\danie\Documents\GitHub\chatbot_javascript\tokens\chatbot-FriBot-Teste\Default\shared_proto_db\metadata/000003.log 
