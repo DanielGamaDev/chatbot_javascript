@@ -65,6 +65,10 @@ const lingerie_varejo = `Lingerie Varejo:
 [3] - Fernanda Foligno.
 [4] - Voltar para o menu de varejo.`;
 
+//Opção 2
+const texto_fernanda_foligno = `Se quiser saber mais sobre nossos pijamas,
+clique no seguinte link e obtenha todas as informações: https://linktr.ee/fernanda.foligno`;
+
 // Opção 2
 const pijamas_varejo = `Pijamas Varejo:
 [1] - Fernanda Foligno.
@@ -193,8 +197,8 @@ const handleUserResponse = async (message) => {
                 await client.sendText(message.from, finalizar_conversa);
                 break;
             case "2":
-                await client.sendText(message.from, pijamas_varejo);
-                await client.sendText(message.from, finalizar_conversa);
+                await client.sendText(message.from, texto_fernanda_foligno); // Cliente recebe o texto da loja escolhida por ele
+                await client.sendText(message.from, finalizar_conversa); // A conversa é finalizada com o bot e o cliente é direcionado para a loja
                 break;
             case "3":
                 await client.sendText(message.from, cuecas_varejo);
